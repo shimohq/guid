@@ -1,0 +1,27 @@
+{
+  "name": "shimo-guid",
+  "version": "1.0.0",
+  "description": "A Guid generator and validator.",
+  "main": "guid.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "should": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "guid.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shimohq/guid.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shimohq/guid/issues"
+  },
+  "homepage": "https://github.com/shimohq/guid"
+}
