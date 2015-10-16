@@ -13,12 +13,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "guid.js",
+  "main": "./guid.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/shimohq/guid.git"
   },
-  "author": "",
+  "author": "Tom Wan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shimohq/guid/issues"

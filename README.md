@@ -30,4 +30,4 @@ Guid.new(16); // generate a new one, default length is 16
     ```
 ## License
 
-MIT &copy; ChuXin Tech
+  MIT &copy; ChuXin Tech
