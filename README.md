@@ -28,6 +28,7 @@ Guid.new(16); // generate a new one, default length is 16
     var Guid = require('shimo-guid');
     var guid = Guid.new();
     ```
+
 ## License
 
-  MIT &copy; ChuXin Tech
+ MIT &copy; ChuXin Tech
