@@ -1,6 +1,6 @@
 {
   "name": "shimo-guid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Guid generator and validator.",
   "main": "guid.js",
   "directories": {

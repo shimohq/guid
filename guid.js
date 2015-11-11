@@ -1,5 +1,7 @@
 'use strict';
 
+const crypto = require('crypto');
+
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const reg = /^[A-Za-z0-9]+$/;
 
@@ -51,6 +53,10 @@ Guid.toInt = function (str) {
   return ret;
 };
 
+Guid.randomChar = function () {
+  return chars[parseInt(Math.random() * clen, 10)];
+};
+
 Guid.new = function (len) {
   if (!len) {
     len = 16;
@@ -60,11 +66,23 @@ Guid.new = function (len) {
     throw new Error('len format error');
   }
 
-  let i = 0;
   let ret = '';
 
-  for(; i < len; i++) {
-    ret += chars[parseInt(Math.random() * clen, 10)];
+  if (len <= 4) {
+    for(let i = 0; i < len; i++) {
+      ret += this.randomChar();
+    }
+
+    return ret;
+  }
+
+  const ranLen = Math.floor(len / 2);
+
+  ret += crypto.randomBytes(ranLen).toString('base64').replace(/\/|\+|\=/g, this.randomChar());
+
+  const retLen = len - ret.length;
+  for(let j = 0; j < retLen; j++) {
+    ret += this.randomChar();
   }
 
   return ret;
