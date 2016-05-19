@@ -78,7 +78,7 @@ Guid.new = function (len) {
 
   const ranLen = Math.floor(len / 2);
 
-  ret += crypto.randomBytes(ranLen).toString('base64').replace(/\/|\+|\=/g, this.randomChar());
+  ret += crypto.randomBytes(ranLen).toString('base64').replace(/\/|\+|\=/g, this.randomChar.bind(this));
 
   const retLen = len - ret.length;
   for(let j = 0; j < retLen; j++) {
